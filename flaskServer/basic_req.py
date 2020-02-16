@@ -2,6 +2,7 @@ import pytest
 
 import server
 import logging
+import time
 
 @pytest.fixture
 def app():
@@ -23,6 +24,8 @@ def test_open_close(app):
    assert app.get('/open_close', query_string={"action": "get_state"}) != 200
    logging.debug("Checking for 0 state")
    assert app.get('/open_close', query_string={"action": "0"})
+   logging.debug("Checking for 1 state")
+   assert app.get('/open_close', query_string={"action": "1"})
    logging.debug("Checking for non 200", )
    assert app.get('/open_close', query_string={"action": "3"}) != 200
    logging.debug(app.get('/open_close', query_string={"action": "get_action"}))
@@ -32,6 +35,15 @@ def test_open_close(app):
    #  assert res.status_code == 200
    #  assert b"Hello World" in res.data
 
+# def test_led_open_close(app):
+#    # print(dir(res), res.status_code)
+#    assert app.get('/led') 
+#    logging.debug("Checking for 1 state")
+#    assert app.get('/open_close', query_string={"action": "1"})
+#    logging.debug("Check for LED OPEN")
+#    assert app.get('/led')
+#    logging.debug("Checking for 0 state")
+#    assert app.get('/open_close', query_string={"action": "0"})
 # def check_per(app):
 #     res = app.get("/foo/12345")
 #     assert res.status_code == 200
