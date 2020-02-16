@@ -13,9 +13,9 @@
 
 ## Our Project
 
-IoT is on the rise. Connected devices not scatter the world, moving data around the world.
+IoT is on the rise. Connected devices now scatter the world, moving data and allowing us to control things with more ease and immersion.
 
-Magician aims to transform the way we see and use IoT device in our daily lives. AR/VR is the next step in transforming our reality.
+Magician aims to transform the way we see and use IoT devices in our daily lives. AR/VR is the next step in transforming our reality to truly see our world in a new view.
 
 
 ## Built With
